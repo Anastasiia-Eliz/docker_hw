@@ -1,0 +1,7 @@
+version: "3.9"
+
+services:
+  app:
+    image: elizarova25/flask-app
+    ports:
+      - 80:80
