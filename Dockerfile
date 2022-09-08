@@ -8,4 +8,4 @@ COPY project project
 ENV FLASK_APP=app.py
 ENV FLASK_ENV = development
 
-CMD flask run -h 0.0.0.0 -p 80
+CMD gunicorn run -h 0.0.0.0 -p 80

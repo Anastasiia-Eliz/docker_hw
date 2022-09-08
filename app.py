@@ -1,7 +1,7 @@
 from project.config import config
 from project.server import create_app
-
+app = create_app(config)
 
 if __name__ == '__main__':
-    application = create_app(config)
-    application.run(port=25000)
+    app.run(host="localhost",
+            debug=True)
