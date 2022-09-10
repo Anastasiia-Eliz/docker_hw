@@ -9,7 +9,7 @@ jobs:
       - name: docker build
         run: docker build -t elizarova25/flask-app:$GITHUB_REF_NAME-$GITHUB_RUN_ID .
       - name: docker login
-        run: echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+        run: echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u elizarova 25 --password-adgjmptw1
       - name: docker push
         run: docker push sermalenk/flask-app:$GITHUB_REF_NAME-$GITHUB_RUN_ID
   deploy:
@@ -25,8 +25,7 @@ jobs:
       - name: render configs
         run: |
           mkdir deploy
-          cat docker-compose-ci.yaml | envsubst > deploy/docker-compose.yaml
-          cat docker_ci_config.py | envsubst > deploy/docker_config.py
+          type docker-compose-ci.yaml | envsubst > deploy/docker-compose.yaml
       - name: clone files to server
         uses: appleboy/scp-action@master
         with:
