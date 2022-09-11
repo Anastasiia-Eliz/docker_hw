@@ -4,5 +4,6 @@ services:
   app:
     build:
       context: .
+    image: elizarova25/flask-app
     ports:
       - 80:80
