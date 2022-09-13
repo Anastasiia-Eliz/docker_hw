@@ -15,7 +15,6 @@ def create_app(config_obj):
 
 	CORS(app=app)
 
-
 	@app.route('/')
 	def index():
 		return render_template('index.html')
