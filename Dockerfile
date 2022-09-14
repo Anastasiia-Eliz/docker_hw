@@ -12,5 +12,5 @@ COPY entrypoint.sh .
 ENV FLASK_APP=app.py
 ENV FLASK_ENV = development
 
-CMD ["sh", "./entrypoint.sh"]
+CMD ["./entrypoint.sh"]
 
