@@ -7,6 +7,7 @@ COPY app.py .
 COPY project project
 COPY create_tables.py .
 COPY load_fixtures.py .
+COPY fixtures.json .
 COPY entrypoint.sh .
 ENV FLASK_APP=app.py
 ENV FLASK_ENV = development
