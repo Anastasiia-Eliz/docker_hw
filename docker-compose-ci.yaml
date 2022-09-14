@@ -18,7 +18,7 @@ services:
         condition: service_healthy
     volumes:
       - ./docker_config.py:/code/default_config.py
-    command: flask db upgrade
+    command: flask db init
   postgres:
     image: postgres:latest
     environment:
