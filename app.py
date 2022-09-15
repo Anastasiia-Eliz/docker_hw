@@ -6,4 +6,4 @@ app = create_app(config)
 migrate = Migrate(app, db)
 
 if __name__ == '__main__':
-	app.run(port=25000)
+	app.run(debug=True)

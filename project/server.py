@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, render_template
-from flask_cors import CORS
+#from flask_cors import CORS
 from project.exceptions import BaseServiceError
 from project.setup.api import api
 from project.setup.db import db
@@ -13,7 +13,7 @@ def create_app(config_obj):
 	app = Flask(__name__)
 	app.config.from_object(config_obj)
 
-	CORS(app=app)
+	#CORS(app=app)
 
 	@app.route('/')
 	def index():
