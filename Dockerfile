@@ -12,5 +12,6 @@ COPY entrypoint.sh .
 ENV FLASK_APP=app.py
 ENV FLASK_ENV = development
 
+
 CMD flask run -h 0.0.0.0 -p 80
 
